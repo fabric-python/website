@@ -1,0 +1,472 @@
+<!doctype html>
+<!--Quite a few clients strip your Doctype out, and some even apply their own. Many clients do honor your doctype and it can make things much easier if you can validate constantly against a Doctype.-->
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fabric Python</title>
+
+<!-- Please use an inliner tool to convert all CSS to inline as inpage or external CSS is removed by email clients --> 
+<!-- important in CSS is used to prevent the styles of currently inline CSS from overriding the ones mentioned in media queries when corresponding screen sizes are encountered -->
+
+<style type="text/css">
+body {
+	margin: 0;
+}
+body, table, td, p, a, li, blockquote {
+	-webkit-text-size-adjust: none!important;
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+button {
+	width: 90%;
+}
+
+@media screen and (max-width:600px) {
+/*styling for objects with screen size less than 600px; */
+body, table, td, p, a, li, blockquote {
+	-webkit-text-size-adjust: none!important;
+	font-family: sans-serif;
+}
+table {
+	/* All tables are 100% width */
+	width: 100%;
+}
+.footer {
+	/* Footer has 2 columns each of 48% width */
+	height: auto !important;
+	max-width: 48% !important;
+	width: 48% !important;
+}
+table.responsiveImage {
+	/* Container for images in catalog */
+	height: auto !important;
+	max-width: 30% !important;
+	width: 30% !important;
+}
+table.responsiveContent {
+	/* Content that accompanies the content in the catalog */
+	height: auto !important;
+	max-width: 66% !important;
+	width: 66% !important;
+}
+.top {
+	/* Each Columnar table in the header */
+	height: auto !important;
+	max-width: 48% !important;
+	width: 48% !important;
+}
+.catalog {
+	margin-left: 0%!important;
+}
+}
+
+@media screen and (max-width:480px) {
+/*styling for objects with screen size less than 480px; */
+body, table, td, p, a, li, blockquote {
+	-webkit-text-size-adjust: none!important;
+	font-family: sans-serif;
+}
+table {
+	/* All tables are 100% width */
+	width: 100% !important;
+	border-style: none !important;
+}
+.footer {
+	/* Each footer column in this case should occupy 96% width  and 4% is allowed for email client padding*/
+	height: auto !important;
+	max-width: 96% !important;
+	width: 96% !important;
+}
+.table.responsiveImage {
+	/* Container for each image now specifying full width */
+	height: auto !important;
+	max-width: 96% !important;
+	width: 96% !important;
+}
+.table.responsiveContent {
+	/* Content in catalog  occupying full width of cell */
+	height: auto !important;
+	max-width: 96% !important;
+	width: 96% !important;
+}
+.top {
+	/* Header columns occupying full width */
+	height: auto !important;
+	max-width: 100% !important;
+	width: 100% !important;
+}
+.catalog {
+	margin-left: 0%!important;
+}
+button {
+	width: 90%!important;
+}
+}
+</style>
+</head>
+<body yahoo="yahoo">
+<table width="100%"  cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td><table width="600"  align="center" cellpadding="0" cellspacing="0">
+          <!-- Main Wrapper Table with initial width set to 60opx -->
+          <tbody>
+            <tr> 
+              <!-- Introduction area -->
+              <td><table width="96%"  align="left" cellpadding="0" cellspacing="0">
+                  <tr> 
+                    <!-- row container for TITLE/EMAIL THEME -->
+                    <td align="center" style="font-size: 32px; font-weight: 300; line-height: 2.5em; color: BLACK; font-family: sans-serif;">Fabric Python</td>
+                  </tr>
+                  <tr> 
+                    <!-- row container for Tagline -->
+                    <td align="center" style="font-size: 16px; font-weight:300; color: BLACK; font-family: sans-serif;">Minecraft Enhancement Client Mod for AI Research</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                        <tr> 
+                          <!-- HTML Spacer row -->
+                          <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                        </tr>
+                      </table></td>
+                  </tr>
+                  <tr> 
+                    <!-- Row container for Intro/ Description -->
+                    <td align="left" style="font-size: 14px; font-style: normal; font-weight: 100; color: BLACK; line-height: 1.8; text-align:justify; padding:10px 20px 0px 20px; font-family: sans-serif;"><p> Fabric Python is a client mod that provides various enhancement for the purpose of AI research.</p>
+                      <p>It should not be used in a multiplayer server. Admis may very likely ban you since a number of features can cause unfairness to other players.</p>
+                      <p>We now discuss its features in detail.&nbsp;&nbsp;</p></td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 0; line-height: 0;" height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16px; " height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 16px; line-height: 0; font-weight: bold;" height="20">Xray</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 14px; line-height: 1.8;" height="20"><p>Xray makes certain types of blocks transparent. This may faciliate finding valuable ores (such as ancient debris and diamond ores) or dungeons. To start or exit the Xray mode, enter in the chat:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/xray&nbsp;</p>
+                      <p>By default, Xray applies to the following blocks: netherrack, stone, granite, diorite, and andesite. More types can be added or deleted by the following commands:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/xray add [Namespace ID]&nbsp;</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/xray del [Namespace ID]&nbsp;</p>
+					  
+					  <p>When Xray is on, near the players there will be green and red cross patterns (this part of the code is from shedaniel's <a href="https://github.com/shedaniel/LightOverlay">light overlay</a>.&nbsp;The green area means that the players can safely step in. The red area means that the player may fall.&nbsp;&nbsp; </p>
+					  </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16px; " height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 16px; line-height: 0; font-weight: bold;" height="20">Night vision</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 14px; line-height: 1.8;" height="20"><p>Night vision lets the render to apply light to all blocks. It can be used for one-side mining (in which we don't place torchs) or for Xray. To turn on or off night vision, enter in the chat:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/nightvision&nbsp;</p></td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16px; " height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 16px; line-height: 0; font-weight: bold;" height="20">Jump boost</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 14px; line-height: 1.8;" height="20"><p>Jumpboost can improve the general gaming experience, especially allowing the players to cross walls (the collision box of which is 1.5-block high). To turn on or off jump boost, enter in the chat:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/jumpboost&nbsp;</p></td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16px; " height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 16px; line-height: 0; font-weight: bold;" height="20">Leviation</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 14px; line-height: 1.8;" height="20"><p>Leviation can make the player move higher and higher. To turn on or off leviation, enter in the chat:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/leviation&nbsp;</p></td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16px; " height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 16px; line-height: 0; font-weight: bold;" height="20">Autoattack</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 14px; line-height: 1.8;" height="20"><p>Autoattack will attack nearby monsters (except endermen and zombified piglins) when the player is holding a sword. To turn on or off autoattack, enter in the chat:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/autoattack&nbsp;</p></td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16px; " height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 16px; line-height: 0; font-weight: bold;" height="20">Safe falling</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 14px; line-height: 1.8;" height="20"><p>Safe falling waivers the falling damage. This feature is by default turned on. To turn off or on this feature, enter in the chat:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/safefall&nbsp;</p></td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16px; " height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 16px; line-height: 0; font-weight: bold;" height="20">Autobuild</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 14px; line-height: 1.8;" height="20"><p>Autobuild horizontally extends the current floor or ceil. When the player holds the blocks in the main hand, and there are more than three of such blocks near the player, it will start to extend this floor or ceil if it is within the reach. To turn off or on this feature, enter in the chat:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/autobuild&nbsp;</p>
+                      <p>To restrict the range of autobuild, which would help more accurate autobuild, set a bounding box by specifying the two edge points:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/pos1 [x1] [y1] [z1] &nbsp;</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/pos2 [x2] [y2] [z2] &nbsp;</p></td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+			<tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16px; " height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 16px; line-height: 0; font-weight: bold;" height="20">Autofeed cows and pigs</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 14px; line-height: 1.8;" height="20"><p>Autofeed allows automatically feeding cows and pigs if the player is holding the food items. To turn off or on this feature, enter in the chat:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/autofeedpig&nbsp;</p>
+					  <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/autofeedcow&nbsp;</p>
+					  </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+			  <tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16px; " height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 16px; line-height: 0; font-weight: bold;" height="20">Smart sneaking</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 14px; line-height: 1.8;" height="20"><p>Smart sneaking prevents the player from falling. It is smart in that it does not slow down the player. To turn on or off smart sneaking, enter in the chat:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/sneaking&nbsp;</p>
+					  </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+			<tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16px; " height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 16px; line-height: 0; font-weight: bold;" height="20">Easyrow</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 14px; line-height: 1.8;" height="20"><p>Easyrow simplifies the rowing by setting the boat to align with the player's focus. This feature is by default turned on. To turn on or off easy row, enter in the chat:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/easyrow&nbsp;</p>
+					  </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+			<tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16px; " height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 16px; line-height: 0; font-weight: bold;" height="20">Monster glowing</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 14px; line-height: 1.8;" height="20"><p>Monster glowing shows the outline of the monsters. To turn on or off monster glowing, enter in the chat:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/mobglow&nbsp;</p>
+					  </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+			<tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16px; " height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 16px; line-height: 0; font-weight: bold;" height="20">Safemine</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 14px; line-height: 1.8;" height="20"><p>Safemine prevents the player from accidentally opening a cave or other dangerous open areas. To turn on or off safemine, enter in the chat:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/safemine&nbsp;</p>
+					  </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+			<tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16px; " height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 16px; line-height: 0; font-weight: bold;" height="20">Autotorch&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 14px; line-height: 1.8;" height="20"><p>Autotorch automatically places torchs when the place has low block lighting if the player is holding torchs on the main hand or the off hand. To turn on or off autotorch, enter in the chat:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/autotorch&nbsp;</p>
+					  </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+			<tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16px; " height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 16px; line-height: 0; font-weight: bold;" height="20">Autolantern&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 14px; line-height: 1.8;" height="20"><p>Autolantern automatically places lanterns on the ceil when the place has low block lighting if the player is holding lanterns on the main hand. This is specially designed to make the ceil not too dark. To turn on or off autolantern, enter in the chat:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/autolantern&nbsp;</p>
+					  </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+			<tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16px; " height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 16px; line-height: 0; font-weight: bold;" height="20">Study mode&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 14px; line-height: 1.8;" height="20"><p>Study mode locks the player for a specified length of time. This allows players to be away from the keyboard and study. To start the study mode, enter in the chat:</p>
+                      <p style="background-color: lightgray; font-family:Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; padding-left: 10px;">/study [minutes to study]&nbsp;</p>
+						<p>To exit the study mode, the players should wait for that length of time. Or, the player can also exit and relaunch the game.</p>
+					  </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+			  <tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16px; " height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 16px; line-height: 0; font-weight: bold;" height="20">Python support, broadly&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 14px; line-height: 1.8;" height="20"><p>Fabric Python provides an API to Python, which allows Python to control the player's actions. More introduction would be provided in the near future.</p>
+					  </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr> 
+              <!-- HTML spacer row -->
+              <td style="font-size: 0; line-height: 0;" height="20"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+          </tbody>
+        </table></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
